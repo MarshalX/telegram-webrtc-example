@@ -1,0 +1,52 @@
+<!--
+  ~ tgcalls - a Python binding for C++ library by Telegram
+  ~ pytgcalls - a library connecting the Python binding with MTProto
+  ~ Copyright (C) 2020-2021 Il`ya (Marshal) <https://github.com/MarshalX>
+  ~
+  ~ This file is part of tgcalls and pytgcalls.
+  ~
+  ~ tgcalls and pytgcalls is free software: you can redistribute it and/or modify
+  ~ it under the terms of the GNU Lesser General Public License as published
+  ~ by the Free Software Foundation, either version 3 of the License, or
+  ~ (at your option) any later version.
+  ~
+  ~ tgcalls and pytgcalls is distributed in the hope that it will be useful,
+  ~ but WITHOUT ANY WARRANTY; without even the implied warranty of
+  ~ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  ~ GNU Lesser General Public License for more details.
+  ~
+  ~ You should have received a copy of the GNU Lesser General Public License v3
+  ~ along with tgcalls. If not, see <http://www.gnu.org/licenses/>.
+  -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Telegram WebRTC test</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+</head>
+<body>
+<nav class="navbar navbar-light bg-light mb-2">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">Telegram WebRTC test</a>
+    </div>
+</nav>
+<section class="container">
+    <div class="form-group mb-2">
+        <label for="local_offer">Local offer payload for sending via JoinGroupCall MTProto method</label>
+        <textarea id="local_offer" class="form-control rounded-0" rows=15></textarea>
+    </div>
+    <div class="form-group mb-2">
+        <label for="remote_sdp">Area to insert answer from MTProto server</label>
+        <textarea id="remote_sdp" class="form-control rounded-0" rows=15></textarea>
+    </div>
+    <div class="form-group d-grid mb-2">
+        <button class="btn btn-primary" onclick="onConnectBtnClick(this)">Connect</button>
+    </div>
+    <div class="alert alert-danger" id="error_alert">Alert for errors</div>
+</section>
+</body>
+<script content="text/javascript" src="main.js"></script>
+</html>
